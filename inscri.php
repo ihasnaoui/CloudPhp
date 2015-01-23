@@ -109,8 +109,8 @@ if (isset($_POST['submit']))
     		if (strlen($password)>3) 
 			{
     			$password=md5($password); //crypt� le password
-    			$connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
-    			mysql_select_db('phpcloud');
+    			$connect=mysql_connect('127.11.6.2','adminsnUnrR1','S8F-UUCpn9Mw',3306);
+    			mysql_select_db('cloudphp');
 
     			$query=mysql_query("SELECT * from inscr WHERE prenom='$prenom' AND mail='$mail'");
     			$rows=mysql_num_rows($query);
