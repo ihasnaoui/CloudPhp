@@ -18,7 +18,7 @@
 		</table>
 		<table border="1" width="100%">
 			<tr>
-				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu à l'Ecole Nationale Supérieure d' Ingénieurs de Tunis (ENSIT)
+				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu ï¿½ l'Ecole Nationale Supï¿½rieure d' Ingï¿½nieurs de Tunis (ENSIT)
 				 </marquee></font></td>
 			</tr>
 		</table>
@@ -45,14 +45,14 @@
 <?php
 if (isset($_POST['submitA']))
 {
-				$connect=mysql_connect('localhost','root','');
-    			mysql_select_db('loginphp');
+				$connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
+    			mysql_select_db('phpcloud');
   				$query=mysql_query("SELECT * from inscr");
 
 echo "
 <table width='40%' border='1' cellpadding='5' align='center'>
 <tr>
-<td>N°CIN</td>
+<td>Nï¿½CIN</td>
 <td>Nom</td>
 <td>Prenom</td>
 <td>Email</td>

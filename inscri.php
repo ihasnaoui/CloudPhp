@@ -18,7 +18,7 @@
 		</table>
 		<table border="1" width="100%">
 			<tr>
-				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu à l'Ecole Nationale Supérieure d' Ingénieurs de Tunis (ENSIT)
+				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu ï¿½ l'Ecole Nationale Supï¿½rieure d' Ingï¿½nieurs de Tunis (ENSIT)
 				 </marquee></font></td>
 			</tr>
 		</table>
@@ -37,7 +37,7 @@
 	<p>&nbsp;</p>
     <p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
-	N° CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	Nï¿½ CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="text" name="ncin" size="20"></span></p>
 	
 	<p>
@@ -59,23 +59,23 @@ Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	Section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<select  name="section">
       <option>Informatique</option>
-      <option>Mécanique</option>
-      <option>Elèctrique</option>
-      <option>Mathématique</option>
+      <option>Mï¿½canique</option>
+      <option>Elï¿½ctrique</option>
+      <option>Mathï¿½matique</option>
       
       </select>
     </span></p>
 	<p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
 	Niveau&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</h4><input type="radio" name="niveau" value="1ére" />1ère
-  <input type="radio" name="niveau" value="2ème" checked="checked"/>2ème
-  <input type="radio" name="niveau" value="3ème" />3ème<br/>
+	</h4><input type="radio" name="niveau" value="1ï¿½re" />1ï¿½re
+  <input type="radio" name="niveau" value="2ï¿½me" checked="checked"/>2ï¿½me
+  <input type="radio" name="niveau" value="3ï¿½me" />3ï¿½me<br/>
   
 	<p>&nbsp;</p>
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="submit" value="Enregistrer" name="submit" style="font-size: 12pt; font-family: Times New Roman; color: #000066; font-weight: bold">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-	<input type="reset" value="Rétablir" name="B2" style="color: #000066; font-family: Times New Roman; font-size: 12pt; font-weight: bold"></p>
+	<input type="reset" value="Rï¿½tablir" name="B2" style="color: #000066; font-family: Times New Roman; font-size: 12pt; font-weight: bold"></p>
 </form></td>
 			</tr>
 		</table>
@@ -108,19 +108,19 @@ if (isset($_POST['submit']))
 		{
     		if (strlen($password)>3) 
 			{
-    			$password=md5($password); //crypté le password
-    			$connect=mysql_connect('localhost','root','');
-    			mysql_select_db('loginphp');
+    			$password=md5($password); //cryptï¿½ le password
+    			$connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
+    			mysql_select_db('phpcloud');
 
     			$query=mysql_query("SELECT * from inscr WHERE prenom='$prenom' AND mail='$mail'");
     			$rows=mysql_num_rows($query);
     			if ($rows==0)
     			 {
     			   $reg=mysql_query("INSERT INTO inscr VALUES ('','$ncin','$nom','$prenom','$password','$mail','$section','$niveau')");
-    			   die('<h2>Inscription terminée</h2>');
+    			   die('<h2>Inscription terminï¿½e</h2>');
 				 }else echo "<h2>Ce nom d'utilisateur n'est pas disponible<h2>";  
     			 }else echo "<h2>Le password doit contenir plus de 3 caracteres</h2>";
-		}else echo "<h2> le NCIN doit etre egal à 8 chifre</h2>";  
+		}else echo "<h2> le NCIN doit etre egal ï¿½ 8 chifre</h2>";  
 
                 
     		}else echo "<h2>Remplir tous les champs</h2>";

@@ -18,7 +18,7 @@
 		</table>
 		<table border="1" width="100%">
 			<tr>
-				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu à l'Ecole Nationale Supérieure d' Ingénieurs de Tunis (ENSIT)
+				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu ï¿½ l'Ecole Nationale Supï¿½rieure d' Ingï¿½nieurs de Tunis (ENSIT)
 				 </marquee></font></td>
 			</tr>
 		</table>
@@ -35,8 +35,8 @@
 <form id="form1" method="POST" action="supprimer.php">
 	    <p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
-   <p>&nbsp;&nbsp;&nbsp;<h5>Entrer le Numéro CIN du menbre à suprimer :</h5></p>
-	N° CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <p>&nbsp;&nbsp;&nbsp;<h5>Entrer le Numï¿½ro CIN du menbre ï¿½ suprimer :</h5></p>
+	Nï¿½ CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="text" name="ncin" size="20"></span></p>
 		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="submit" value="Supprimer" name="submitSup" style="font-size: 12pt; font-family: Times New Roman; color: #000066; font-weight: bold">
@@ -58,8 +58,8 @@
  <?php
 if($_POST['submitSup'])
 {
-  $connect=mysql_connect('localhost','root','');
-  mysql_select_db('loginphp');
+ $connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
+    			mysql_select_db('phpcloud');
   
   $ncin=$_POST['ncin'];
   if (strlen($ncin)==8) 
@@ -71,13 +71,13 @@ if($_POST['submitSup'])
   $requete = mysql_query( $sql, $connect ) ;
   if($requete)
   {
-    echo("<h2>La suppression à été correctement effectuée</h2>") ;
+    echo("<h2>La suppression ï¿½ ï¿½tï¿½ correctement effectuï¿½e</h2>") ;
   }
   else
   {
-    echo("<h2>La suppression à échouée</h2>") ;
+    echo("<h2>La suppression ï¿½ ï¿½chouï¿½e</h2>") ;
   }
-}else echo "<h2> Vérifier le numéro de CIN</h2>";
+}else echo "<h2> Vï¿½rifier le numï¿½ro de CIN</h2>";
 }
   ?>
 	

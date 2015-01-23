@@ -18,7 +18,7 @@
 		</table>
 		<table border="1" width="100%">
 			<tr>
-				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu à l'Ecole Nationale Supérieure d' Ingénieurs de Tunis (ENSIT)
+				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu ï¿½ l'Ecole Nationale Supï¿½rieure d' Ingï¿½nieurs de Tunis (ENSIT)
 				 </marquee></font></td>
 			</tr>
 		</table>
@@ -26,7 +26,7 @@
 			<tr>
 				<td>
 				<p align="center"><b><i>
-				<font size="4" face="Times New Roman" color="#0000FF">Modifier les données</font></i></b></td>
+				<font size="4" face="Times New Roman" color="#0000FF">Modifier les donnï¿½es</font></i></b></td>
 			</tr>
 		</table>
 	
@@ -38,13 +38,13 @@
 	
     <p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
-   <p>&nbsp;&nbsp;&nbsp;<h5>Entrer le Numéro CIN du menbre à modifier :</h5></p>
-	N° CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <p>&nbsp;&nbsp;&nbsp;<h5>Entrer le Numï¿½ro CIN du menbre ï¿½ modifier :</h5></p>
+	Nï¿½ CIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="text" name="ncin" size="20"></span></p>
 	
 	<p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
-    <p>&nbsp;&nbsp;&nbsp;<h5>Entrer les nouveaux données du menbre :</h5></p>
+    <p>&nbsp;&nbsp;&nbsp;<h5>Entrer les nouveaux donnï¿½es du menbre :</h5></p>
 	Nom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="text" name="nom" size="20"></span></p>
 	<p>
@@ -59,18 +59,18 @@
 	Section&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<select  name="section">
       <option>Informatique</option>
-      <option>Mécanique</option>
-      <option>Elèctrique</option>
-      <option>Mathématique</option>
+      <option>Mï¿½canique</option>
+      <option>Elï¿½ctrique</option>
+      <option>Mathï¿½matique</option>
       
       </select>
     </span></p>
 	<p>
 	<span style="font-size: 12.0pt; line-height: 115%; font-family: 'Times New Roman',serif">
 	Niveau&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	</h4><input type="radio" name="niveau" value="1ére" />1ère
-  <input type="radio" name="niveau" value="2ème" checked="checked"/>2ème
-  <input type="radio" name="niveau" value="3ème" />3ème<br/>
+	</h4><input type="radio" name="niveau" value="1ï¿½re" />1ï¿½re
+  <input type="radio" name="niveau" value="2ï¿½me" checked="checked"/>2ï¿½me
+  <input type="radio" name="niveau" value="3ï¿½me" />3ï¿½me<br/>
   
 	<p>&nbsp;</p>
 	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -85,8 +85,8 @@
 <?php
 if($_POST['submit'])
 {
-  $connect=mysql_connect('localhost','root','');
-  mysql_select_db('loginphp');
+  $connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
+    			mysql_select_db('phpcloud');
   
   $ncin=$_POST['ncin'];
   $nom=$_POST['nom'];
@@ -109,13 +109,13 @@ if($_POST['submit'])
   $requete = mysql_query($sql, $connect) or die( mysql_error() ) ;
   if($requete)
   {
-    echo("<h2>La modification à été correctement effectuée</h2>") ;
+    echo("<h2>La modification ï¿½ ï¿½tï¿½ correctement effectuï¿½e</h2>") ;
   }
   else
   {
-    echo("<h2>La modification à échouée</h2>") ;
+    echo("<h2>La modification ï¿½ ï¿½chouï¿½e</h2>") ;
   } 
-  } else echo "<h2>Numéro CIN incorrect</h2>";
+  } else echo "<h2>Numï¿½ro CIN incorrect</h2>";
 
   
 }

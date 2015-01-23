@@ -19,7 +19,7 @@
 		</table>
 		<table border="1" width="100%">
 			<tr>
-				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu à l'Ecole Nationale Supérieure d' Ingénieurs de Tunis (ENSIT)
+				<td><font size="+1" color="#0000FF"><marquee><font color="blue"> Bienvenu ï¿½ l'Ecole Nationale Supï¿½rieure d' Ingï¿½nieurs de Tunis (ENSIT)
 				 </marquee></font></td>
 			</tr>
 		</table>
@@ -43,7 +43,7 @@ Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	<input type="password" name="password" size="20"></span></p>
 	<p>
 	<input type="submit" value="Connecter" name="submit" style="font-size: 12pt; font-family: Times New Roman; color: #000066; font-weight: bold">
-    <p>Si vous n'êtes pas membre?</p>
+    <p>Si vous n'ï¿½tes pas membre?</p>
     <a href="inscri.php">Inscrivez vous maintenant</a>
     <p>&nbsp;</p>
      <p>&nbsp;</p>
@@ -68,8 +68,8 @@ if (isset($_POST['submit']))
 	     header('location:admin.php');}
 		 
 	   else{
-		     $conect=mysql_connect('localhost','root','');
-    	     mysql_select_db('loginphp');
+		     $connect=mysql_connect('127.11.6.2','adminstqScTq',' gKKHC6bRL9Gv',3306);
+    			mysql_select_db('phpcloud');
 			 //echo $password;
 	$test=mysql_query("SELECT ncin from inscr WHERE nom=$nom");
 	if ($test==0){
